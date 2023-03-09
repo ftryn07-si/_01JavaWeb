@@ -1,0 +1,41 @@
+<form th:action="@{/api/usrmgmnt/v1/menu/new}" th:object = "${menu}" method="POST">
+	<div class ="form-group">
+		<label> Nama Menu </label>
+		<input
+				type = "text"
+				name = "namaMenu"
+				th:field = "*{namaMenu}"
+				class = "form-control"
+				placeholder="Masukkan Nama Menu"
+		/>
+	</div>
+
+	<div class ="form-group">
+		<label> Path Menu </label>
+		<input
+				type = "text"
+				name = "pathMenu"
+				th:field = "*{pathMenu}"
+				class = "form-control"
+				placeholder="Path Menu diawali /api/"
+		/>
+	</div>
+
+	<div class ="form-group">
+		<label> End Point </label>
+		<input
+				type = "text"
+				name = "endPoint"
+				th:field = "*{endPoint}"
+				class = "form-control"
+				placeholder="Tanyakan Bagian IT"
+		/>
+	</div>
+
+	<div class = "modal-footer">
+		<button type="submit" class = "btn btn-primary">
+			Submit
+		</button>
+		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	</div>
+</form>
